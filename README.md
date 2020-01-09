@@ -86,7 +86,7 @@ JDK是Java Development Kit 的缩写，中文称为Java开发工具包，由SUN�
 
 如下图所示
 
-<img src="http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/installation/pic-1.png" alt="gafag" style="zoom:67%;" />
+<img src="image/pic-1.png" width="40%" />
 
 ##### CLASSPATH
 
@@ -96,7 +96,7 @@ JDK是Java Development Kit 的缩写，中文称为Java开发工具包，由SUN�
 
 如下如所示：
 
-<img src="http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/installation/pic-2.png" alt="width" style="zoom:67%;" />
+<img src="image/pic-2.png" width="40%" />
 
 ##### PATH
 
@@ -104,7 +104,7 @@ JDK是Java Development Kit 的缩写，中文称为Java开发工具包，由SUN�
 
 如下图所示：
 
-<img src="http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/installation/pic-3.png" alt="w" style="zoom:67%;" />
+<img src="image/pic-3.png" width="40%" />
 
 ### 其他
 
@@ -120,7 +120,7 @@ JDK是Java Development Kit 的缩写，中文称为Java开发工具包，由SUN�
 
 打开`cmd`（Linux或MacOS下的终端），输入`java`，应该出现类似这样的内容。
 
-<img src="http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/installation/pic-4.png" alt="w" style="zoom:67%;" />
+<img src="image/pic-4.png" width="100%" />
 
 ##### 系统评测机使用的Java版本是什么呢？
 
@@ -166,12 +166,12 @@ Idea则是Jetbrains全家桶的一员（[Idea官网](https://www.jetbrains.com/i
 #### 下载安装Idea
 
 初次打开Idea的下载页面，一下子就懵了：
-<img src="https://images2018.cnblogs.com/blog/703546/201804/703546-20180401170622526-507795689.png" alt="w" style="zoom:67%;" />
+<img src="https://images2018.cnblogs.com/blog/703546/201804/703546-20180401170622526-507795689.png" width="100%;" />
 
 499刀一年。。。看的有些肾疼。那是不是我们Idea之旅就要就此止步了呢？Of course, **NO!**
 
 让我们继续往下看：
-<img src="https://images2018.cnblogs.com/blog/703546/201804/703546-20180401171002449-1960143244.png" alt="w" style="zoom:67%;" />
+<img src="https://images2018.cnblogs.com/blog/703546/201804/703546-20180401171002449-1960143244.png" width="100%;" />
 
 果然，`Intellij Idea`和`Pycharm`一样，都提供了**完全免费的社区版**，可以直接下载使用。
 
@@ -191,11 +191,11 @@ Idea则是Jetbrains全家桶的一员（[Idea官网](https://www.jetbrains.com/i
 
 创建新工程时，我们只需要按照一般的套路来：`File`-->`New`-->`Project...`
 
-<img src="http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/idea-usage/idea-new-project-1.png" width="67%;" />
+<img src="http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/idea-usage/idea-new-project-1.png" width="50%;" />
 
 在我们的作业项目中，我们不使用框架，使用原生Java。所以一路Next到最后一步。
 
-<img src="http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/idea-usage/idea-new-project-2.png" width="67%;" />
+<img src="http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/idea-usage/idea-new-project-2.png" width="50%;" />
 
 在这里，我们需要设置一下项目名，然后点击`Finish`，即可完成项目创建。
 
@@ -207,13 +207,19 @@ Idea则是Jetbrains全家桶的一员（[Idea官网](https://www.jetbrains.com/i
 
 研读过[阿里巴巴java开发代码规范手册](https://files.cnblogs.com/files/han-1034683568/%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8Cv1.2.0.pdf)的同学们应该知道，在真正的工程代码中，处于**代码可维护性**和**提高团队合作效率**的考量，会有很多代码规范性的要求。因此在每一次oo作业中，我们都会使用一个叫做`checkstyle`的Java代码风格检查工具进行代码风格的检查。其中配置文件使用本仓库内提供的`config.xml`文件，作为代码风格检查的依据。
 
-如何在本地配置代码风格检查插件，检查java代码是否符合规范？我们通过下列操作来进行。
+如何在本地配置代码风格检查插件，检查java代码是否符合规范？我们通过安装`Checkstyle-IDEA`插件来进行。
 
-在IDEA中，我们依次点击`File->Settings->Plugins`下载安装`Checkstyle-IDEA`插件（在此，我们推荐安装的插件版本为`8.16`），对ide内的代码进行实时风格检测。安装好插件后通过`File->Settings->Other Settings->CheckStyle`将我们提供的`config.xml`载入即可。
+为保证工具集版本一致性，我们推荐大家安装的插件版本为`8.16`，请大家移步网址https://github.com/jshiell/checkstyle-idea/releases找到指定版本的`checkstyle-idea`插件下载其zip包。
+
+下载完插件之后，我们依次点击`File->Settings->Plugins`进入插件管理页面，在这个页面中点击`Install Plugin from Disk...`找到我们刚刚下载好的zip包，即可完成配置指定版本的`checkstyle-idea`插件。配置完成后，我们只需要重启IDEA，插件即可生效。
+
+!<img src="image/pic-5.png" width="80%" />
+
+插件安装完成后，依次点击`File->Settings->Other Settings->CheckStyle`将我们提供的代码风格检查文件`config.xml`载入，随后在窗口左下角点入CheckStyle选取相应的规则（即我们导入的配置文件）即可进行代码风格检查。
+
+<img src="image/pic-6.png" width="50%" />
 
 在窗口左下角点入CheckStyle选取相应的规则（即我们导入的配置文件）进行代码风格检查
-
-<img src="C:\Users\Ge Yifei\AppData\Roaming\Typora\typora-user-images\image-20200108185733806.png" alt="x" style="zoom:67%;" />
 
 #### IDEA的特性
 
@@ -269,7 +275,7 @@ Idea则是Jetbrains全家桶的一员（[Idea官网](https://www.jetbrains.com/i
 
 我们只需要想到了某个类或者某个方法，直接在程序中写上去，然后ide就会提示该类未导入，就像这样
 
-<img src = "http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/idea-usage/class-import-1.png" width = "67%>
+<img src = "http://misaka-oss.oss-cn-beijing.aliyuncs.com/cs/oo_assistant_files/idea-usage/class-import-1.png" width = "67%">
 
 我们只需要将鼠标或者光标移至该类名上，并使用`Alt`+`Enter`快捷键，从提供的类中选择需要的，完成自动添加。（有时可能只有一个类可供选择，此时将不会出现选择直接完成添加）
 
